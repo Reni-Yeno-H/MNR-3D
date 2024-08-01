@@ -77,5 +77,22 @@ public class PlayerMovement : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
+
+        // Draw Ray
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 10f;
+        mousePos = playerCamera.ScreenToWorldPoint(mousePos);
+        Debug.DrawRay(transform.position,mousePos-transform.position,Color.blue);
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if(Physics.Raycast(ray,out hit,100))
+            {
+                Debug.Log(hit.transform.name);
+            }
+        }
     }
 }
