@@ -7,6 +7,7 @@ public class AirBrakeDown : MonoBehaviour
     //Animator anim;
     public Camera cam;
     private bool flipDown = true;
+    public bool brakesApplied;
     void Start()
     {
         //anim = gameObject.GetComponent<Animator>();
@@ -28,10 +29,12 @@ public class AirBrakeDown : MonoBehaviour
                     if(flipDown)
                     {
                         animator.SetBool("Active",true);
+                        brakesApplied = true;
                     }
                     else
                     {
                        animator.SetBool("Active",false); 
+                       brakesApplied = false;
                     }
                     
                 flipDown = !flipDown;
