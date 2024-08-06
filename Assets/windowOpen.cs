@@ -30,13 +30,13 @@ public class windowOpen : MonoBehaviour
                     if(isOpen)
                     {
                         color.material.color = Color.green;
-                        window.SetBool("WindowOpen",false);
+                        window.SetBool("Active",false);
 
                     }
                     else
                     {
                        color.material.color = Color.red;
-                       window.SetBool("WindowOpen",true); 
+                       window.SetBool("Active",true); 
 
                     }
                     
