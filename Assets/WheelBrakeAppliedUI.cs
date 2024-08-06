@@ -33,8 +33,8 @@ public class WheelBrakeAppliedUI : MonoBehaviour
     {
         if (airBrakeState != null)
         {
-        if (airBrakeState.brakesApplied)
-        {
+        } else{
+        
             // Handle applied brakes
             if (!appliedWheels.Contains(wheel))
             {
@@ -45,10 +45,9 @@ public class WheelBrakeAppliedUI : MonoBehaviour
 
                 }
             }
-        }
-        }
-        else
-        {
+        
+        
+        
             // Handle released brakes
             if (!releasedWheels.Contains(wheel))
             {
