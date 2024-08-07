@@ -24,23 +24,29 @@ public class windowOpen : MonoBehaviour
 
             if(Physics.Raycast(ray,out hit))
             {
-                if (hit.collider.gameObject==gameObject)
+                Animator animator = hit.collider.GetComponent<Animator>();
+
+                if(animator!=null)
                 {
+
+                
                     
                     if(isOpen)
                     {
                         color.material.color = Color.green;
-                        window.SetBool("Active",false);
+                        window.SetBool("WindowOpen",false);
 
                     }
                     else
                     {
                        color.material.color = Color.red;
-                       window.SetBool("Active",true); 
+                       window.SetBool("WindowOpen",true); 
 
                     }
                     
                 isOpen = !isOpen;
+                
+
                 }
             }
             
