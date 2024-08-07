@@ -32,13 +32,13 @@ public class AirBrakeDown : MonoBehaviour
                     {
                         airbrake.SetBool("Active",true);
                         brakesApplied = true;
-                        statusText.text = "Brakes > Applied";
+                        statusText.text = "Active Brake Status > Applied";
                     }
                     else
                     {
                        airbrake.SetBool("Active",false); 
                        brakesApplied = false;
-                       statusText.text = "Brakes > Released";
+                       statusText.text = "Active Brake Status > Released";
                     }
                     
                 flipDown = !flipDown;
