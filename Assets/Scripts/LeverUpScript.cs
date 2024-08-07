@@ -6,6 +6,7 @@ public class LeverUpScript : MonoBehaviour
 {
     //Animator anim;
     public Camera cam;
+    public Animator lever;
     private bool flipUp = true;
     void Start()
     {
@@ -21,17 +22,16 @@ public class LeverUpScript : MonoBehaviour
 
             if(Physics.Raycast(ray,out hit))
             {
-                Animator animator = hit.collider.GetComponent<Animator>();
 
-                if(animator!=null)
+                if (hit.collider.gameObject==gameObject)
                 {
                     if(flipUp)
                     {
-                        animator.SetBool("Active",true);
+                        lever.SetBool("Active",true);
                     }
                     else
                     {
-                       animator.SetBool("Active",false); 
+                       lever.SetBool("Active",false); 
                     }
                     
                 flipUp = !flipUp;

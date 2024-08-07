@@ -24,13 +24,9 @@ public class windowOpen : MonoBehaviour
 
             if(Physics.Raycast(ray,out hit))
             {
-                Animator animator = hit.collider.GetComponent<Animator>();
-
-                if(animator!=null)
+                if (hit.collider.gameObject==gameObject)
                 {
-
-                
-                    
+    
                     if(isOpen)
                     {
                         color.material.color = Color.green;

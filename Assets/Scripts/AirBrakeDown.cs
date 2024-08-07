@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AirBrakeDown : MonoBehaviour
 {
     //Animator anim;
+    public Animator airbrake;
     public Camera cam;
     private bool flipDown = true;
     public bool brakesApplied;
@@ -24,19 +25,18 @@ public class AirBrakeDown : MonoBehaviour
 
             if(Physics.Raycast(ray,out hit))
             {
-                Animator animator = hit.collider.GetComponent<Animator>();
 
-                if(animator!=null)
+                if (hit.collider.gameObject==gameObject)
                 {
                     if(flipDown)
                     {
-                        animator.SetBool("Active",true);
+                        airbrake.SetBool("Active",true);
                         brakesApplied = true;
                         statusText.text = "Brakes > Applied";
                     }
                     else
                     {
-                       animator.SetBool("Active",false); 
+                       airbrake.SetBool("Active",false); 
                        brakesApplied = false;
                        statusText.text = "Brakes > Released";
                     }
