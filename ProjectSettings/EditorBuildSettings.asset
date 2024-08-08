@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Tutorial Yard.unity
+    guid: b5cae0e136cb3be47a9268ed6018a228
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 56de40bb00a185c4093e78ddea557c81
+  - enabled: 1
+    path: Assets/Scenes/Yard.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

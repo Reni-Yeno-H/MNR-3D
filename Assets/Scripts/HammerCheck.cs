@@ -59,7 +59,7 @@ public class HammerCheck : MonoBehaviour
                    {
                        //if(previousState != airBrakeState.brakesApplied)
                        //{
-                            PlayAudioClip(audioBrakesReleased);
+                            PlayAudioClip(audioBrakesApplied);
                        //}
                        //PlayAudioClip(audioBrakesReleased);
                        //brakesOff.Play(animationNameOff);
@@ -69,7 +69,7 @@ public class HammerCheck : MonoBehaviour
                    {
                        //if(previousState != airBrakeState.brakesApplied)
                        //{
-                            PlayAudioClip(audioBrakesApplied);
+                            PlayAudioClip(audioBrakesReleased);
                        //}
                        //PlayAudioClip(audioBrakesApplied);
                        //brakesOn.Play(animationNameOn);
